@@ -40,6 +40,9 @@ class ExperimentConfig:
     fusion: str        = "hybrid" 
     embedding_dim: int = 1024
 
+    # NOTE: These are competition-mode defaults.
+    # The IEEE paper ablation experiments (scripts/ablation/run_ablation.py)
+    # override these with: lr=1e-3, weight_decay=1e-4, batch_size=64.
     lr: float = 1e-4 
     batch_size: int    = 128
     max_epochs: int = 1000
