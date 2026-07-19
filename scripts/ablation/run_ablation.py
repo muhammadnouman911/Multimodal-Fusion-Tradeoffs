@@ -395,6 +395,21 @@ def main():
             json.dump(all_results, f, indent=4)
         print(f"\n  [Saved Exp C' results]", flush=True)
 
+    # ════════════════════════════════════════════════════════════════════════
+    # EXPERIMENT D'  — FOP_MAV + MultiBranch Fusion + SAM + SWA
+    #   Resolves optimizer confound for Experiment D
+    # ════════════════════════════════════════════════════════════════════════
+    if args.run in ("all", "extended", "prime_only"):
+        res_d_prime = train_ablation(
+            "Exp D': FOP_MAV + MultiBranch Fusion + SAM/SWA",
+            grl_alpha=0.0, dropout_face=0.0, dropout_audio=0.0,
+            fusion="hybrid", use_sam=True, use_swa=True, swa_start=100, **common
+        )
+        all_results["Experiment_D_prime_MultiBranchFusion_SAM_SWA"] = res_d_prime
+        with open(os.path.join(out_dir, "ablation_results.json"), "w") as f:
+            json.dump(all_results, f, indent=4)
+        print(f"\n  [Saved Exp D' results]", flush=True)
+
     # ── Final summary ────────────────────────────────────────────────────────
     print(f"\n{'='*60}", flush=True)
     print("EXTENDED ABLATION STUDY COMPLETE", flush=True)
