@@ -52,8 +52,8 @@ The experiments utilize the **MAV-Celeb** multilingual audio-visual dataset.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/anonymous/multibranchfop-analysis.git
-cd multibranchfop-analysis
+git clone https://github.com/muhammadnouman911/Multimodal-Fusion-Tradeoffs.git
+cd Multimodal-Fusion-Tradeoffs
 ```
 
 2. Create a conda environment and install dependencies:
@@ -87,7 +87,7 @@ python scripts/ablation/run_exp_d_and_primes.py
 ### 5. Advanced Figure Generation
 To generate publication-grade IEEE figures (t-SNE embedding plots, attention heatmaps, radar chart, component contribution bar chart):
 ```bash
-python paper/figures/plot_advanced_figures.py
+python scripts/figures/plot_advanced_figures.py
 ```
 
 ## Results
