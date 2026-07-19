@@ -1,0 +1,17 @@
+__pycache__/
+.idea/
+.vscode/
+*.log
+*.tmp
+*.bak
+*.pth
+*.ckpt
+checkpoints/
+datasets/
+cache/
+wandb/
+outputs/
+unused/
+Train/
+Dev/
+*.npy
