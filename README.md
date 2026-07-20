@@ -48,8 +48,6 @@ Multimodal-Fusion-Tradeoffs/
 ├── configs/                  # Configuration files (config.py with hyperparameter overrides)
 ├── datasets/                 # Lightweight sample dataset for demonstration (5 samples each)
 │   └── sample_data/          # CSV manifests & sample feature tensors (.npy)
-├── paper/                    # Paper assets & LaTeX sources
-│   └── latex/                # IEEE conference template (.tex, .cls) & Figures 1-7 + Architecture
 ├── results/                  # Generated figures, CSV summaries, & JSON diagnostic reports
 │   ├── ablation_study/       # Multi-seed statistical summary tables
 │   ├── figures/              # Publication figures (PDF & PNG)
