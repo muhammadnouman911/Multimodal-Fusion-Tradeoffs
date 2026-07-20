@@ -4,15 +4,18 @@ __pycache__/
 *.log
 *.tmp
 *.bak
-*.pth
-*.ckpt
-/checkpoints/
-/datasets/
 /cache/
 /wandb/
 /outputs/
 /unused/
 /Train/
 /Dev/
-*.npy
 
+# Ignore large raw datasets & heavy intermediate checkpoints by default
+*.ckpt
+/datasets/*
+!/datasets/sample_data/
+
+/checkpoints/*
+!/checkpoints/fop_linear_seed42_best.pt
+!/checkpoints/v17_ZeroShot_IEEE_seed42_fold0_hybrid_ep153_p399.0_p499.0.pt

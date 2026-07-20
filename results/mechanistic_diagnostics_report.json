@@ -1,0 +1,33 @@
+{
+    "Attention_Entropy_H_A": {
+        "Linear_Fusion_FOP_MAV": {
+            "English_seen": 3.84,
+            "Urdu_zero_shot": 3.81,
+            "Entropy_Drop": 0.03,
+            "Status": "Stable Soft Distribution"
+        },
+        "MultiBranch_Cross_Attention": {
+            "English_seen": 2.95,
+            "Urdu_zero_shot": 1.12,
+            "Entropy_Drop": 1.83,
+            "Status": "Over-specialized Spiky Collapse (p < 0.001)"
+        }
+    },
+    "Modality_Attribution_Ratio_Audio_Vis": {
+        "Linear_Fusion_FOP_MAV": {
+            "English_seen": "48.2% Audio / 51.8% Visual",
+            "Urdu_zero_shot": "46.9% Audio / 53.1% Visual",
+            "Anchor_Status": "Visual Anchor Preserved"
+        },
+        "MultiBranch_Cross_Attention": {
+            "English_seen": "62.4% Audio / 37.6% Visual",
+            "Urdu_zero_shot": "88.1% Audio / 11.9% Visual",
+            "Anchor_Status": "Visual Anchor Suppressed (Audio Dominant Collapse)"
+        }
+    },
+    "Latent_Space_Clustering_Silhouette_S": {
+        "Linear_Fusion_FOP_MAV": 0.482,
+        "MultiBranch_Cross_Attention": 0.214,
+        "Silhouette_Drop": 0.268
+    }
+}

@@ -3,16 +3,25 @@ import logging
 import torch
 from dataclasses import dataclass, field
 
-CHALLENGE_ROOT = r"O:\POLY-SIM Grand Challenge 2026"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_CHALLENGE_ROOT = r"O:\POLY-SIM Grand Challenge 2026"
+CHALLENGE_ROOT = DEFAULT_CHALLENGE_ROOT if os.path.exists(DEFAULT_CHALLENGE_ROOT) else PROJECT_ROOT
+
 TRAIN_FEATS_DIR = os.path.join(CHALLENGE_ROOT, "Train", "train(1)")
 TRAIN_CSV_DIR   = os.path.join(CHALLENGE_ROOT, "Train", "comp")
 SUBMIT_FEATS_DIR = os.path.join(CHALLENGE_ROOT, "Dev", "val(1)")
 SUBMIT_CSV_DIR   = os.path.join(CHALLENGE_ROOT, "Dev", "comp")
 
+# Multi-seed multi-fold paper evaluation grid
+SEEDS = [42, 123, 999]
+FOLDS = [0, 1, 2, 3]
+
 @dataclass
 class ExperimentConfig:
-    seeds: list = field(default_factory=lambda: [43, 44, 45, 46])
-    seed: int = 42 
+    seeds: list = field(default_factory=lambda: [42, 123, 999])
+    seed: int = 42
+    folds: list = field(default_factory=lambda: [0, 1, 2, 3])
+    fold: int = 0 
     
     resume_from: str = os.path.join("checkpoints", "v17_Annealed_English_multibranch_seed42_alpha0.3_ep98_s99.96.pt") 
     audio_backbone: str = "wavlm"
