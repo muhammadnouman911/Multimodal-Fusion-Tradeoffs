@@ -16,12 +16,15 @@ This repository provides a controlled experimental framework evaluating:
 
 ## Pre-trained Checkpoints & Reviewer Verification
 
-For paper reviewers and researchers seeking quick verification, pre-trained model weights are provided directly in the repository under the `checkpoints/` directory:
+For paper reviewers and researchers seeking quick verification, pre-trained model weights are hosted on Hugging Face and can be downloaded directly:
 
-| Checkpoint File | Architecture | Description | Target Performance |
-|:---|:---|:---|:---|
-| [`checkpoints/fop_linear_seed42_best.pt`](file:///o:/Research%20Project/github_repo/checkpoints/fop_linear_seed42_best.pt) | Linear Fusion Baseline (FOP_MAV) | Best baseline model trained on English, demonstrating high cross-lingual transfer. | **98.16%** Zero-Shot Urdu |
-| [`checkpoints/v17_ZeroShot_IEEE_seed42_fold0_hybrid_ep153_p399.0_p499.0.pt`](file:///o:/Research%20Project/github_repo/checkpoints/v17_ZeroShot_IEEE_seed42_fold0_hybrid_ep153_p399.0_p499.0.pt) | MultiBranch Hybrid Fusion | Full cross-attention model exhibiting cross-lingual trade-off. | **86.04%** Zero-Shot Urdu |
+🤗 **Hugging Face Model Weights & Checkpoints Repository:**  
+👉 **[https://huggingface.co/datasets/MuhammadNouman911/Multimodal-Fusion-Tradeoffs](https://huggingface.co/datasets/MuhammadNouman911/Multimodal-Fusion-Tradeoffs)**
+
+| Checkpoint File | Architecture | Description | Target Performance | Download Link |
+|:---|:---|:---|:---|:---|
+| `fop_linear_seed42_best.pt` | Linear Fusion Baseline (FOP_MAV) | Best baseline model trained on English, demonstrating high cross-lingual transfer. | **98.16%** Zero-Shot Urdu | [Hugging Face](https://huggingface.co/datasets/MuhammadNouman911/Multimodal-Fusion-Tradeoffs) |
+| `v17_ZeroShot_IEEE_seed42_fold0_hybrid_ep153_p399.0_p499.0.pt` | MultiBranch Hybrid Fusion | Full cross-attention model exhibiting cross-lingual trade-off. | **86.04%** Zero-Shot Urdu | [Hugging Face](https://huggingface.co/datasets/MuhammadNouman911/Multimodal-Fusion-Tradeoffs) |
 
 ---
 
